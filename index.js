@@ -40,8 +40,8 @@ var completed = -1;
             }
             console.log("\x1b[0m", '');
             setTimeout(function() {
-                pdf.end().then(process.exit())
-                
+                pdf.end();
+                console.log("finished pdf, you can close application now :)")
             },5000);
         }}
       }, 5000);
