@@ -1,0 +1,28 @@
+{
+  "name": "pearsonplaces-downloader",
+  "version": "1.0.0",
+  "description": "pearsonplaces.com.au downloader",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ch7rms/pearsonplaces-downloader.git"
+  },
+  "keywords": [
+    "downloader",
+    "pearson-places"
+  ],
+  "author": "ch7rms",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ch7rms/pearsonplaces-downloader/issues"
+  },
+  "homepage": "https://github.com/ch7rms/pearsonplaces-downloader#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "https": "1.0.0",
+    "pdfkit": "0.13.0"
+  }
+}
