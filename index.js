@@ -23,9 +23,9 @@ var completed = -1;
     var bookorg = bookpg;
 
     setInterval(function() {
-        if(fs.existsSync('./page'+bookorg+'.jpg') && completed == bookorg){
+        if(fs.existsSync('./page'+bookorg+'.PNG') && completed == bookorg){
             for (let i = 0; i < bookpg; i++) {
-                var img = pdf.openImage('./page' +i+'.jpg');
+                var img = pdf.openImage('./page' +i+'.PNG');
                 pdf.addPage({size: [img.width, img.height]});
                 pdf.image(img, 0, 0);
             }
@@ -33,9 +33,9 @@ var completed = -1;
             console.log("\x1b[31m", '');
             console.log("finished converting! deleting temp pngs.");
             for (let i = 0; i < bookpg; i++) {
-                fs.unlink('page'+i+'.jpg', function (err) {
+                fs.unlink('page'+i+'.PNG', function (err) {
                     if (err) throw err;
-                    console.log('deleted: page' + i + ".jpg");
+                    console.log('deleted: page' + i + ".PNG");
                 });
             }
             console.log("\x1b[0m", '');
@@ -50,7 +50,7 @@ var completed = -1;
       for (let i = 0; i < bookpg; i++) {
         setTimeout(
             function(){
-                const file = fs.createWriteStream('page' + i + '.jpg');
+                const file = fs.createWriteStream('page' + i + '.PNG');
                     const request = http.get('https://d2f01w1orx96i0.cloudfront.net/resources/products/epubs/generated/' + bookid + '/foxit-assets/pages/page' + i, function(response) {
                         response.pipe(file);
                         file.on("finish", () => {
