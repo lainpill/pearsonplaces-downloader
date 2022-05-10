@@ -2,6 +2,7 @@
 # pearson-place downloader
 
 Downloads eBooks from PearsonPlaces into a pdf format (with node.js)
+Ive seen others but I pref nodejs (im weird)
 
 
 ## Installation
